@@ -74,6 +74,16 @@ export default function Header() {
             >
               Team
             </button>
+            <Link
+              href="/news"
+              className={`font-medium transition-colors ${
+                isScrolled
+                  ? "text-gray-700 hover:text-ftl-green"
+                  : "text-white hover:text-gray-200"
+              }`}
+            >
+              News
+            </Link>
             <button
               onClick={() => scrollToSection("contact")}
               className={`font-medium transition-colors ${
@@ -155,6 +165,15 @@ export default function Header() {
               >
                 Team
               </button>
+              <Link
+                href="/news"
+                className={`font-medium ${
+                  isScrolled ? "text-gray-700" : "text-white"
+                }`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                News
+              </Link>
               <button
                 onClick={() => scrollToSection("contact")}
                 className={`font-medium text-left ${
